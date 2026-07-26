@@ -1,11 +1,11 @@
 32-spi-w25q32\w25qx.o: ..\Core\Src\w25qx.c
-32-spi-w25q32\w25qx.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-32-spi-w25q32\w25qx.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+32-spi-w25q32\w25qx.o: E:\Keil\ARM\ARMCC\Bin\..\include\string.h
+32-spi-w25q32\w25qx.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 32-spi-w25q32\w25qx.o: ../Core/Inc/w25qx.h
 32-spi-w25q32\w25qx.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 32-spi-w25q32\w25qx.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 32-spi-w25q32\w25qx.o: ../Drivers/CMSIS/Include/core_cm3.h
-32-spi-w25q32\w25qx.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+32-spi-w25q32\w25qx.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 32-spi-w25q32\w25qx.o: ../Drivers/CMSIS/Include/cmsis_version.h
 32-spi-w25q32\w25qx.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 32-spi-w25q32\w25qx.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
@@ -16,7 +16,7 @@
 32-spi-w25q32\w25qx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 32-spi-w25q32\w25qx.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 32-spi-w25q32\w25qx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-32-spi-w25q32\w25qx.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+32-spi-w25q32\w25qx.o: E:\Keil\ARM\ARMCC\Bin\..\include\stddef.h
 32-spi-w25q32\w25qx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 32-spi-w25q32\w25qx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 32-spi-w25q32\w25qx.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h

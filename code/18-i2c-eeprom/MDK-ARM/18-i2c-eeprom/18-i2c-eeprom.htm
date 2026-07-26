@@ -3,7 +3,7 @@
 <title>Static Call Graph - [18-i2c-eeprom\18-i2c-eeprom.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image 18-i2c-eeprom\18-i2c-eeprom.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Sep 02 15:21:17 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Sat Jul 25 17:08:40 2026
 <BR><P>
 <H3>Maximum Stack Usage =        696 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -109,11 +109,9 @@ Global Symbols
 
 <P><STRONG><a name="[90]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[91]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
+<P><STRONG><a name="[91]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[92]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
-
-<P><STRONG><a name="[93]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+<P><STRONG><a name="[92]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f103xb.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
@@ -243,16 +241,16 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[94]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[93]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[40]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[95]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[94]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[96]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[95]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[3f]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -263,7 +261,7 @@ Global Symbols
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[97]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[96]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[41]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
@@ -288,13 +286,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[98]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[97]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
 <P><STRONG><a name="[44]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
 
-<P><STRONG><a name="[99]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[98]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
 <P><STRONG><a name="[46]"></a>BEEP_Control</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, gpio.o(i.BEEP_Control))
 <BR><BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
@@ -783,7 +781,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[9a]"></a>__1printf$8</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
+<P><STRONG><a name="[99]"></a>__1printf$8</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8), UNUSED)
 
 <P><STRONG><a name="[4b]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf8.o(i.__0printf$8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
@@ -793,11 +791,11 @@ Global Symbols
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9b]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[9a]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[9c]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[9b]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[9d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[9c]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 
 <P><STRONG><a name="[3c]"></a>fputc</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, usart.o(i.fputc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = fputc &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
@@ -983,7 +981,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 </UL>
 
-<P><STRONG><a name="[8a]"></a>_printf_core</STRONG> (Thumb, 984 bytes, Stack size 104 bytes, printf8.o(i._printf_core), UNUSED)
+<P><STRONG><a name="[8a]"></a>_printf_core</STRONG> (Thumb, 996 bytes, Stack size 104 bytes, printf8.o(i._printf_core), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding

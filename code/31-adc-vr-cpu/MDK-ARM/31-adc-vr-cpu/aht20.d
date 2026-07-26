@@ -1,7 +1,7 @@
 31-adc-vr-cpu\aht20.o: ..\Core\Src\aht20.c
-31-adc-vr-cpu\aht20.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+31-adc-vr-cpu\aht20.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 31-adc-vr-cpu\aht20.o: ../Core/Inc/aht20.h
-31-adc-vr-cpu\aht20.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+31-adc-vr-cpu\aht20.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 31-adc-vr-cpu\aht20.o: ../Core/Inc/i2c.h
 31-adc-vr-cpu\aht20.o: ../Core/Inc/main.h
 31-adc-vr-cpu\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
@@ -17,7 +17,7 @@
 31-adc-vr-cpu\aht20.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 31-adc-vr-cpu\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 31-adc-vr-cpu\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-31-adc-vr-cpu\aht20.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+31-adc-vr-cpu\aht20.o: E:\Keil\ARM\ARMCC\Bin\..\include\stddef.h
 31-adc-vr-cpu\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 31-adc-vr-cpu\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 31-adc-vr-cpu\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h

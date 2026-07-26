@@ -1,7 +1,7 @@
 33-can\aht20.o: ..\Core\Src\aht20.c
-33-can\aht20.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+33-can\aht20.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 33-can\aht20.o: ../Core/Inc/aht20.h
-33-can\aht20.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+33-can\aht20.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 33-can\aht20.o: ../Core/Inc/i2c.h
 33-can\aht20.o: ../Core/Inc/main.h
 33-can\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
@@ -17,7 +17,7 @@
 33-can\aht20.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 33-can\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 33-can\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-33-can\aht20.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+33-can\aht20.o: E:\Keil\ARM\ARMCC\Bin\..\include\stddef.h
 33-can\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 33-can\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 33-can\aht20.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h

@@ -8,14 +8,14 @@
 33-can\ina226.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 33-can\ina226.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 33-can\ina226.o: ../Drivers/CMSIS/Include/core_cm3.h
-33-can\ina226.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+33-can\ina226.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 33-can\ina226.o: ../Drivers/CMSIS/Include/cmsis_version.h
 33-can\ina226.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 33-can\ina226.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 33-can\ina226.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 33-can\ina226.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 33-can\ina226.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-33-can\ina226.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+33-can\ina226.o: E:\Keil\ARM\ARMCC\Bin\..\include\stddef.h
 33-can\ina226.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 33-can\ina226.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 33-can\ina226.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -36,4 +36,4 @@
 33-can\ina226.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 33-can\ina226.o: ../Core/Inc/i2c.h
 33-can\ina226.o: ../Core/Inc/oled.h
-33-can\ina226.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+33-can\ina226.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h

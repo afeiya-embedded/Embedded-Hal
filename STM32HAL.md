@@ -145,7 +145,7 @@
 
 ### 3.2 GPIO工作模式
 
-```c
+```bash
 #define GPIO_MODE_INPUT 0x00000000u /*!< Input Floating Mode */
 #define GPIO_MODE_OUTPUT_PP 0x00000001u /*!< Output Push Pull Mode */
 #define GPIO_MODE_OUTPUT_OD 0x00000011u /*!< Output Open Drain Mode */
@@ -342,9 +342,102 @@ HAL_StatusTypeDef HAL_UART_Receive_DMA(UART_HandleTypeDef *huart, uint8_t *pData
 
   ##### 满中断是当整个DMA传输完成时触发的中断。这个中断⽤来通知CPU，表⽰整个数据传输已经完成，可以进⾏后续的处理  
 
+---
+
+## 第八章 I2C 总线
+
+### 8.1 介绍
+
+![image-20260726101111291](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260726101111291.png)
+
+#### 1. “总线”指多个设备共⽤的信号线。在⼀个 I2C 通讯总线中，可连接多个 I2C 通讯设备，⽀持多个通讯主机及多个通讯从机  
+
+#### 2. ⼀个 I2C 总线只使⽤两条总线线路，⼀条双向串⾏数据线(SDA) ，⼀条串⾏时钟线 (SCL) 数据线即⽤来表⽰数据，时钟线⽤于数据收发同步
+
+#### 3. 每个连接到总线的设备都有⼀个独⽴的地址，主机可以利⽤这个地址进⾏不同设备之间的访问  
+
+   #### 4. 总线通过上拉电阻接到电源。当 I2C 设备空闲时，会输出⾼阻态，由上拉电阻把总线拉成⾼电平  
+
+#### 5. 多个主机同时使⽤总线时，为了防⽌数据冲突，会利⽤仲裁⽅式决定由哪个设备占⽤总线  
+
+#### 6. 具有三种传输模式：标准模式传输速率为 100kbit/s ，快速模式为 400kbit/s ，⾼速模式下可达 3.4Mbit/s，但⽬前⼤多 I2C 设备尚不⽀持⾼速模式
+
+#### 7. 连接到相同总线的 IC 数量受到总线的最⼤电容 400pF 限制
+
+### 8.2 通信过程
+
+![image-20260726101510961](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260726101510961.png)  
+
+- 地址位之后，是传输⽅向的选择位，该位为 0 时，表⽰后⾯的数据传输⽅向是由主机传输⾄从机，即主机向从机写数据。该位为 1 时，则相反，即主机由从机读数据  
+
+- ⼀般在第⼀次传输中，主机通过 SLAVE_ADDRESS 寻找到从设备后， 发送⼀段“数据”，这段数据通常⽤于表⽰从设备内部的寄存器或存储器地址(注意区分它 与 SLAVE_ADDRESS 的区别)；在第⼆次的传输中，对该地址的内容进⾏读或写  第⼀次通讯是告诉从机读写地址，第⼆次则是读写的实际内容  
+
+### 8.3 起始和停止信号
+
+![image-20260726101919614](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260726101919614.png)
+
+- 信号只有在SCL高电平有效
+
+### 8.4 EEPROM(AT24C02)
+
+![image-20260726102201364](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260726102201364.png)
+
+- 引脚图中 E1、E2、E3为器件地址引脚，GND为地，VCC为正电源，WP为写保护，SCL为串⾏时钟线，SDA为串⾏数据线。
+
+- EEPROM 芯⽚中 WP 引脚具有写保护功能，当该引脚电平为⾼时，禁⽌写⼊数据，当引脚为低电平时，可写⼊数据，我们直接接地，不使⽤写保护功能
+- AT24Cxx 设备地址为如下，前四位固定为 1010，E3~E1为由管脚电平决定。AT24Cxx EEPROM Board模块中默认为接地。E3~E1 为000，最后⼀位 R/W 表⽰读写操作。所以由于 I2C 通讯时常常是地址跟读写⽅向连在⼀起构成⼀个 8 位数，当 R/W 位为 0 时，表⽰写⽅向，所以加上 7 位地址，其值为 0xA0，常称该值为 I2C 设备的“写地址”当  R/W 位为 1 时，表⽰读⽅向，加上 7 位地址，其值为 0xA1，常称该值为“读地址”
+
+### 8.5 OLED
+
+#### SSD1306是⼀款带控制器的⽤于OLED点阵图形显⽰系统的单⽚CMOS OLED/PLED驱动器。它由128个SEG（列输出）和64个COM（⾏输出）组成。该芯⽚专为共阴极OLED⾯板设计。I2C接⼝⽀持100KHz和400KHz 的速度模式。IIC总线包含从机地址位 SA0，数据信号SDA和时钟信号线 SCL组成。SDA和SCL线都必须接上拉电阻，RES#⽤来初始化芯⽚。IIC设备在数据传输之前都必须识别从机地址。SSD1306的从机地址有 0111100b 和 0111101b 两种，通过将SA0(D/C#)脚上拉到⾼电平可以设置从机地址第七位为 1，将SA0(D/C#)脚下拉到低电平可以设置从机地址第七位为 0 因此通过调整0R电阻，屏可以0x78和0x7A两个地址 -- 默认0x78(8位地址)
+
+![image-20260726215054286](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260726215054286.png)
+
+![image-20260726215119142](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260726215119142.png)
+
+### 8.6 AHT20 温湿度传感器
 
 
 
+
+
+
+
+
+
+
+
+---
+
+## 第九章 Watchdog 看门狗定时器
+
+
+
+
+
+---
+
+## 第十章 RTC 实时时钟
+
+
+
+
+
+
+
+---
+
+
+
+## 第十一章 PWR(power) 电源管理
+
+
+
+
+
+
+
+---
 
 
 
