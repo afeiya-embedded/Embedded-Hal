@@ -397,23 +397,148 @@ HAL_StatusTypeDef HAL_UART_Receive_DMA(UART_HandleTypeDef *huart, uint8_t *pData
 
 ### 8.6 AHT20 温湿度传感器
 
+#### 1. 器件地址
+
+##### 在I2C通信中，这个地址⽤于与主控制器进⾏通信。需要注意的是，器件地址的最低位（LSB）⽤于指⽰读写操作，为0表⽰写操作，为1表⽰读操作。在 I²C 总线上，每个设备都有⼀个唯⼀的地址，这个地址⽤于识别总线上的各个设备。对于 AHT20 温湿度传感器，它的默认 I²C 地址通常是固定的，AHT20 的 I²C 地址是 0x38 (⼗六进制表⽰) 或者 56 (⼗进制表⽰)。组合成⼀个8位的地址的为：
+
+- 写器件的地址：（(0x38<<1) = 0x70
+
+- 读器件的地址：（(0x38<<1)|0x1 = 0x71
+
+#### 2. 读写时序
+
+##### 写命令时序：当主机想要触发 AHT20 的温湿度测量时，需要向 AHT20 发送⼀个写命令。
+
+##### 基本步骤如下：
+
+1. 起始条件：主机发送⼀个 I²C 起始条件。
+
+2. 写⼊地址：主机写⼊ AHT20 的 I²C 地址（0x38）
+
+3. 写⼊命令：主机发送⼀个命令字节，以触发温湿度测量。AHT20 ⽀持不同的命令字节，例如：
+
+0xAC ：开始测量，不返回数据。
+
+0xE1 ：开始测量，返回数据。
+
+4. 确认：主机等待从设备确认接收到命令（ACK）
+
+5. 停⽌条件：主机发送⼀个 I²C 停⽌条件。
+
+6. 等待：AHT20 开始测量过程，并需要⼀定的时间来完成测量（典型的延迟时间可以在数据⼿册中找到）
+
+   读取数据时序⼀旦AHT20完成了温湿度测量，主机就可以读取数据了。基本步骤如下：
 
 
 
+##### 读取数据时序 ⼀旦 AHT20 完成了温湿度测量，主机就可以读取数据了
 
+##### 基本步骤如下：  
 
+1. 起始条件：主机发送⼀个 I²C 起始条件
 
+2. 写⼊地址：主机写⼊ AHT20 的 I²C 地址（0x38）
 
+3. 写⼊命令：主机发送命令字节 0xE0 ，以请求读取数据
 
+4. 确认：主机等待从设备确认接收到命令（ACK）
 
+5. 重复起始条件：主机发送⼀个 I²C 重复起始条件，准备读取数据。
+
+6. 读取地址：主机发送 AHT20 的 I²C 地址（0x38），但是这次作为读取操作。
+
+7. 读取数据：主机从 AHT20 读取数据，数据包括：
+
+- 6 字节的数据（2 字节的湿度⾼位和低位，2 字节的温度⾼位和低位，2 字节的校验码 CRC）
+
+8. ⾮ ACK 和停⽌条件：主机在读取最后⼀个字节后发送⼀个⾮ ACK，然后发送⼀个 I²C 停⽌条件
+
+### 8.7 INA226 功率传感器
+
+#### 器件地址
+
+![image-20260726220222972](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260726220222972.png)
+
+#### 配置寄存器
+
+![image-20260726220315315](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260726220315315.png)
+
+```c
+/写配置寄存器
+//0100_010_100_100_111 //16次平均,1.1ms,1.1ms,连续测量分流电压和总线电压
+//0100 0101 0010 0111
+// 4 5 2 7
+//0100_011_111_111_111 //64次平均,8.2ms,8.2ms,连续测量分流电压和总线电压
+//0100 0111 1111 1111
+// 4 7 f f
+//#define Configuration_Register_Init 0x4527
+#define Configuration_Register_Init 0x47ff
+void INA226_Init(void)
+{
+uint8_t tData[3];
+tData[0] = Configuration_Register;
+tData[1] = Configuration_Register_Init >> 8;
+tData[2] = (uint8_t)Configuration_Register_Init;
+HAL_I2C_Master_Transmit(&hi2c1, INA226_ADDR, tData, 3, 0xff);
+HAL_Delay(5);
+tData[0] = Calibration_Register;
+tData[1] = Calibration_Register_Init >> 8;
+tData[2] = (uint8_t)Calibration_Register_Init;
+HAL_I2C_Master_Transmit(&hi2c1, INA226_ADDR, tData, 3, 0xff);
+}
+```
+
+#### 校准寄存器
+
+##### 这个寄存器为 INA226 提供了分流电阻值，这个电阻值⽤来校准测得的差分电压  
+
+![image-20260726220428774](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260726220428774.png)
+
+```c
+//写校准寄存器
+//LSB选择0.1mA,分压电阻选0.01R
+// Cal=0.00512/(0.1mA*0.01R) * 1000 =5120
+#define Calibration_Register_Init 5120
+void INA226_Init(void)
+{
+uint8_t tData[3];
+tData[0] = Configuration_Register;
+tData[1] = Configuration_Register_Init >> 8;
+tData[2] = (uint8_t)Configuration_Register_Init;
+HAL_I2C_Master_Transmit(&hi2c1, INA226_ADDR, tData, 3, 0xff);
+HAL_Delay(5);
+tData[0] = Calibration_Register;
+tData[1] = Calibration_Register_Init >> 8;
+tData[2] = (uint8_t)Calibration_Register_Init;
+HAL_I2C_Master_Transmit(&hi2c1, INA226_ADDR, tData, 3, 0xff);
+}
+```
 
 ---
 
 ## 第九章 Watchdog 看门狗定时器
 
+### 介绍
 
+#### STM32看⻔狗（Watchdog）是⼀种硬件定时器，⽤于监控和保护嵌⼊式系统的运⾏。它可以检测系统是否出现故障或死锁，并在发⽣故障时采取预定的操作来重置系统。STM32微控制器通常具有内部看⻔狗定时器，可以通过配置寄存器来启⽤和设置看⻔狗的计时周期。⼀旦启⽤，看⻔狗定时器开始倒计时，如果在指定的时间内没有重置或喂狗，看⻔狗将被触发，并执⾏预定的操作，如系统复位或中断
 
+### 种类
 
+1. #### 功能：
+
+独⽴看⻔狗：基本的看⻔狗功能，具有单独的12位计时器，⽤于监控系统的运⾏。⼀旦启⽤，如果在指定的时间内没有重置或喂狗，独⽴看⻔狗将触发系统复位。
+
+窗⼝看⻔狗：在独⽴看⻔狗的基础上增加了窗⼝功能。可以设置⼀个窗⼝时间范围，在此范围内喂狗可以防⽌看⻔狗触发。如果在窗⼝时间范围外或未及时喂狗，窗⼝看⻔狗将触发系统复位。
+
+![image-20260726221121004](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260726221121004.png)
+
+2. #### 喂狗机制：
+
+独⽴看⻔狗：只需在规定的时间内定期重置或喂狗即可，否则会触发复位。
+
+窗⼝看⻔狗：需要在窗⼝时间范围内定期喂狗，如果在窗⼝时间范围外或未及时喂狗，会触发复位 窗口下限0x40 上限自己设置
+
+![image-20260726221040650](C:\Users\xf\AppData\Roaming\Typora\typora-user-images\image-20260726221040650.png)
 
 ---
 
