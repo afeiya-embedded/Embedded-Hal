@@ -265,7 +265,7 @@ uint8_t ML307_Connect_TCPServer(void)
 		/*******************************************************/
         WIFI4G_CMD_Status = WIFI4G_NOT ;	 // 初始化标志位 
         strcpy((char *)Parse_Substr,"OK\r\n"); // 检查网络连接是否成功
-        strcpy((char *)buf,"AT+SOCK=1,1,\"8.135.10.183\",33778,0\r\n"); // 设置透传模式 
+        strcpy((char *)buf,"AT+SOCK=1,1,\"120.76.240.167\",58143,0\r\n"); // 设置透传模式 
         HAL_UART_Transmit(&huart3,buf,strlen((char *)buf),1000);
         if(Test_WIFI4G_CMD_Status(1000) == WIFI4G_ERROR)  {
                 return RESET ;  // 等待OK返回 

@@ -461,12 +461,11 @@ ARM Macro Assembler    Page 8
 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=35-wifi4g-at\startup_stm32f103xb.d -o35-wifi4g-at\startup_stm32f10
-3xb.o -I.\RTE\_35-wifi4g-at -IC:\Users\shengli\AppData\Local\Arm\Packs\ARM\CMSI
-S\5.7.0\CMSIS\Core\Include -IC:\Users\shengli\AppData\Local\Arm\Packs\Keil\STM3
-2F1xx_DFP\2.3.0\Device\Include --predefine="__MICROLIB SETA 1" --predefine="__U
-VISION_VERSION SETA 532" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD S
-ETA 1" --predefine="_RTE_ SETA 1" --list=startup_stm32f103xb.lst startup_stm32f
-103xb.s
+3xb.o -I.\RTE\_35-wifi4g-at -IE:\Keil\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -I
+E:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__MICROLI
+B SETA 1" --predefine="__UVISION_VERSION SETA 524" --predefine="_RTE_ SETA 1" -
+-predefine="STM32F10X_MD SETA 1" --list=startup_stm32f103xb.lst startup_stm32f1
+03xb.s
 
 
 

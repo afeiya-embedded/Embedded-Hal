@@ -177,7 +177,7 @@ uint8_t ESP8266_Connect_TCPServer(void)
 
 	WIFI4G_CMD_Status = WIFI4G_NOT; // 初始化标志位
 	// strcpy((char *)buf,"AT+CIPSTART=\"TCP\",\"172.20.10.11\",8000\r\n");
-	strcpy((char *)buf, "AT+CIPSTART=\"TCP\",\"192.168.1.186\",8000\r\n");
+	strcpy((char *)buf, "AT+CIPSTART=\"TCP\",\"192.168.32.1\",8080\r\n");
 	HAL_UART_Transmit(&huart3, buf, strlen((char *)buf), 1000);
 
 	OLED_ShowStr(0, 4, (unsigned char *)"AT+CIPSTART", 2); // 测试8*16字符

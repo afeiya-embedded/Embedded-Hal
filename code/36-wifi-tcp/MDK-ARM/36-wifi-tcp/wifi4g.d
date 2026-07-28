@@ -1,8 +1,8 @@
 36-wifi-tcp\wifi4g.o: ..\Core\Src\wifi4g.c
-36-wifi-tcp\wifi4g.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-36-wifi-tcp\wifi4g.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-36-wifi-tcp\wifi4g.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-36-wifi-tcp\wifi4g.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+36-wifi-tcp\wifi4g.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+36-wifi-tcp\wifi4g.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+36-wifi-tcp\wifi4g.o: E:\Keil\ARM\ARMCC\Bin\..\include\string.h
+36-wifi-tcp\wifi4g.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 36-wifi-tcp\wifi4g.o: ../Core/Inc/stm32f1xx_it.h
 36-wifi-tcp\wifi4g.o: ../Core/Inc/wifi4g.h
 36-wifi-tcp\wifi4g.o: ../Core/Inc/main.h
@@ -19,7 +19,7 @@
 36-wifi-tcp\wifi4g.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 36-wifi-tcp\wifi4g.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 36-wifi-tcp\wifi4g.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-36-wifi-tcp\wifi4g.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+36-wifi-tcp\wifi4g.o: E:\Keil\ARM\ARMCC\Bin\..\include\stddef.h
 36-wifi-tcp\wifi4g.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 36-wifi-tcp\wifi4g.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 36-wifi-tcp\wifi4g.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h

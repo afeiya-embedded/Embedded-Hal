@@ -8,14 +8,14 @@
 37-4g-tcp\adc.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 37-4g-tcp\adc.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 37-4g-tcp\adc.o: ../Drivers/CMSIS/Include/core_cm3.h
-37-4g-tcp\adc.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+37-4g-tcp\adc.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 37-4g-tcp\adc.o: ../Drivers/CMSIS/Include/cmsis_version.h
 37-4g-tcp\adc.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 37-4g-tcp\adc.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 37-4g-tcp\adc.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 37-4g-tcp\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 37-4g-tcp\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-37-4g-tcp\adc.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+37-4g-tcp\adc.o: E:\Keil\ARM\ARMCC\Bin\..\include\stddef.h
 37-4g-tcp\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 37-4g-tcp\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 37-4g-tcp\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -37,4 +37,4 @@
 37-4g-tcp\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 37-4g-tcp\adc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 37-4g-tcp\adc.o: ../Core/Inc/oled.h
-37-4g-tcp\adc.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+37-4g-tcp\adc.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
