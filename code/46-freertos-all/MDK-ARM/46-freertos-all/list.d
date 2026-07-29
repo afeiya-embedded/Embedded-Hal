@@ -1,8 +1,8 @@
 46-freertos-all\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
-46-freertos-all\list.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+46-freertos-all\list.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
 46-freertos-all\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-46-freertos-all\list.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-46-freertos-all\list.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+46-freertos-all\list.o: E:\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+46-freertos-all\list.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 46-freertos-all\list.o: ../Core/Inc/FreeRTOSConfig.h
 46-freertos-all\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 46-freertos-all\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

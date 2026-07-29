@@ -84,11 +84,11 @@ void MX_RTC_Init(void)
   }
   /* USER CODE BEGIN RTC_Init 2 */
 		struct tm rtc_tm;
-		rtc_tm.tm_year = 2025-1900;
-		rtc_tm.tm_mon  = 9-1;
-		rtc_tm.tm_mday = 4;
-		rtc_tm.tm_hour = 11;
-		rtc_tm.tm_min  = 11;
+		rtc_tm.tm_year = 2026-1900;
+		rtc_tm.tm_mon  = 7-1;
+		rtc_tm.tm_mday = 28;
+		rtc_tm.tm_hour = 23;
+		rtc_tm.tm_min  = 18;
 		rtc_tm.tm_sec  = 10;
 		RTC_WriteTimeCounter(&hrtc,mktime(&rtc_tm));
 		HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR1,0x5051);  // 设置标志位, 表示时间已经被设置	

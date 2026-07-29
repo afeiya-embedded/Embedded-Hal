@@ -1,8 +1,8 @@
 46-freertos-all\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
-46-freertos-all\stream_buffer.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-46-freertos-all\stream_buffer.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+46-freertos-all\stream_buffer.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+46-freertos-all\stream_buffer.o: E:\Keil\ARM\ARMCC\Bin\..\include\string.h
 46-freertos-all\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-46-freertos-all\stream_buffer.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+46-freertos-all\stream_buffer.o: E:\Keil\ARM\ARMCC\Bin\..\include\stddef.h
 46-freertos-all\stream_buffer.o: ../Core/Inc/FreeRTOSConfig.h
 46-freertos-all\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 46-freertos-all\stream_buffer.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

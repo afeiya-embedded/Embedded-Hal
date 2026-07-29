@@ -1,7 +1,7 @@
 46-freertos-all\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/port.c
 46-freertos-all\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-46-freertos-all\port.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-46-freertos-all\port.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+46-freertos-all\port.o: E:\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+46-freertos-all\port.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 46-freertos-all\port.o: ../Core/Inc/FreeRTOSConfig.h
 46-freertos-all\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 46-freertos-all\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

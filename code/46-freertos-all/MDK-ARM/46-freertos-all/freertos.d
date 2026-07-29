@@ -1,7 +1,7 @@
 46-freertos-all\freertos.o: ../Core/Src/freertos.c
 46-freertos-all\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-46-freertos-all\freertos.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-46-freertos-all\freertos.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+46-freertos-all\freertos.o: E:\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+46-freertos-all\freertos.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 46-freertos-all\freertos.o: ../Core/Inc/FreeRTOSConfig.h
 46-freertos-all\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 46-freertos-all\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
@@ -60,8 +60,8 @@
 46-freertos-all\freertos.o: ../Core/Inc/spi.h
 46-freertos-all\freertos.o: ../Core/Inc/wifi4g.h
 46-freertos-all\freertos.o: ../Core/Inc/fifo.h
-46-freertos-all\freertos.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-46-freertos-all\freertos.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-46-freertos-all\freertos.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+46-freertos-all\freertos.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+46-freertos-all\freertos.o: E:\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+46-freertos-all\freertos.o: E:\Keil\ARM\ARMCC\Bin\..\include\string.h
 46-freertos-all\freertos.o: ../Core/Inc/usart.h
 46-freertos-all\freertos.o: ../Core/Inc/can.h
