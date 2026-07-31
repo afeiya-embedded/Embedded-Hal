@@ -676,6 +676,39 @@ RS-485总线弥补了RS-232通信距离短，速率低的缺点，RS-485的速�
 ### 传输
 ![alt text](image-3.png)
 ---
+## WIFI模块
+### ESP8266模组特性
+- 802.11 b/g/n
+- 内置 Tensilica L106 超低功耗 32 位微型 MCU，主频⽀持 80 MHz 和 160 MHz，⽀持 RTOS
+- 内置 10bit ⾼精度 ADC
+- 内置 TCP/IP 协议栈
+- 内置 TR开关、balun、LNA、功率放⼤器 和 匹配⽹络
+- 内置PLL、稳压器和电源管理组件，802.11b 模式下 +20dBm 的输出功率
+- A-MPDU 、A-MSDU 的聚合和 0.4s 的保护间隔
+- WiFi @ 2.4GHz，⽀持 WPA/WPA2 安全模式
+- ⽀持 AT远程升级 及云端 OTA升级
+- ⽀持 STA/AP/STA+AP ⼯作模式
+- ⽀持 Smart Config 功能（包括 Android 和 iOS 设备）
+- HSPI 、UART、I2C、I2S、IR Remote Control、PWM、GPIO
+- 深度睡眠保持电流为 10uA，关断电流⼩于 5uA2ms 之内唤醒、连接并传递数据包待机状态消耗功率⼩于 1.0mW (DTIM3)
+- ⼯作温度范围：-40℃- 125℃
+### AT命令
+1. AT：测试与模块的连接是否正常
+2. AT+RST：重启ESP8266模块
+3. AT+CWMODE=：设置Wi-Fi⼯作模式，mode可以是1、2或3，分别对应STA模式、AP模式和STA+AP模式
+4. AT+CWJAP="afeiya","987654321"：连接到指定的Wi-Fi⽹络，需要提供SSID和密码
+5. AT+CWLAP：列出附近可⽤的Wi-Fi⽹络
+6. AT+CIPMODE=1：设置传输模式为透传模式
+7. AT+CIPMUX=0：设置单链接模式
+8. AT+CIPSTART="TCP","192.168.1.128",8000 ：建⽴与指定服务器的TCP或UDP连接，type可以是"TCP"或"UDP"，addr是服务器地址，port是端⼝号
+9. AT+CIPCLOSE：关闭当前的TCP或UDP连接
+10. AT+CIPSEND：进入透传
+11. +++：退出透传 
+---
+## 4G模块
+### ML307R-DC核⼼板介绍
+![alt text](image-4.png)
+
 ## 20.1 FreeRTOS
 
 ### 20.2 任务管理task
