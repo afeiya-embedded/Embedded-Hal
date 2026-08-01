@@ -708,7 +708,47 @@ RS-485总线弥补了RS-232通信距离短，速率低的缺点，RS-485的速�
 ## 4G模块
 ### ML307R-DC核⼼板介绍
 ![alt text](image-4.png)
-
+### 功能框图
+![alt text](image-5.png)
+### AT命令
+1. ATI： 查询设备版本号
+2. AT+REST： 设备重启
+3. AT+IMEI?： 查询设备IMEI号
+4. AT+IMSI?： 查询设备IMSI号
+5. AT+ICCID?: 查询设备ICCID号
+6. AT+CEREG?: 查询设备驻⽹状态
+- 0 ： 未驻⽹
+- 1 ： 驻⽹成功
+- 3 ： 注册⽹路被拒绝
+- 5 ： 驻⽹成功
+7. AT+CSQ: 查询设备⽹路信号强度
+- 0 ： -113 dBm or less
+- 1 ： -111 dBm
+- 2..30 ： -109. . . -53 dBm
+- 31 ： -51 dBm or greater
+- 99 ： 未知或⽆法检测
+8. AT+DTUTASK: 设置DTU任务 AT+DTUTASK="<reserve>","<task_id>"
+- 整形，通道 id ，范围 1~4。
+- <task_id> 整型，任务 id ，默认值 0 。
+- 参数说明：
+0：⽆任务
+10 ： SOCKET任务（TCP透传/UDP透传/多通道SOCK）
+20 ： MQTT任务（单路透传/多通道MQTT）
+22 ： ONENET任务（ONENET 物联⽹平台 MQTT 接⼊，属性点/数据流）
+30 ： HTTP 透传模式
+9. AT+SOCK 设置 SOCKET 参数 T+SOCK=1,1,"8.135.10.183",33778,0
+- socket ⽀持最⼤ 4 路通道，每个通道完全独⽴，可分别设置参数，⽀持 TCP 和 UDP 如果没有使能多通道，则只有第⼀路设置会⽣效， AT+SOCKMULT 指令可以开启多通道
+- 参数说明：
+整型，socket 通道标号，范围 1~4 
+整型，socket 通道使能，默认 0 [关闭] 
+0 : 关闭
+1 : 使能
+字符串，服务器地址，⽀持域名，范围 1-256
+整型，服务器端⼝号，范围是 0-65535
+整型，socket 通道的协议
+0 : TCP
+1 : UDP
+---
 ## 20.1 FreeRTOS
 
 ### 20.2 任务管理task
