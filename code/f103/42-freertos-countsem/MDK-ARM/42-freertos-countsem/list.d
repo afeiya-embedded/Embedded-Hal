@@ -1,0 +1,12 @@
+42-freertos-countsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+42-freertos-countsem\list.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+42-freertos-countsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+42-freertos-countsem\list.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+42-freertos-countsem\list.o: D:\Software\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+42-freertos-countsem\list.o: ../Core/Inc/FreeRTOSConfig.h
+42-freertos-countsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+42-freertos-countsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+42-freertos-countsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+42-freertos-countsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+42-freertos-countsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+42-freertos-countsem\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

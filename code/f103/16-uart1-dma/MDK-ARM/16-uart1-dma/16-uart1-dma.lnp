@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"16-uart1-dma\startup_stm32f103xb.o"
+"16-uart1-dma\main.o"
+"16-uart1-dma\gpio.o"
+"16-uart1-dma\dma.o"
+"16-uart1-dma\usart.o"
+"16-uart1-dma\stm32f1xx_it.o"
+"16-uart1-dma\stm32f1xx_hal_msp.o"
+"16-uart1-dma\stm32f1xx_hal_gpio_ex.o"
+"16-uart1-dma\stm32f1xx_hal_uart.o"
+"16-uart1-dma\stm32f1xx_hal.o"
+"16-uart1-dma\stm32f1xx_hal_rcc.o"
+"16-uart1-dma\stm32f1xx_hal_rcc_ex.o"
+"16-uart1-dma\stm32f1xx_hal_gpio.o"
+"16-uart1-dma\stm32f1xx_hal_dma.o"
+"16-uart1-dma\stm32f1xx_hal_cortex.o"
+"16-uart1-dma\stm32f1xx_hal_pwr.o"
+"16-uart1-dma\stm32f1xx_hal_flash.o"
+"16-uart1-dma\stm32f1xx_hal_flash_ex.o"
+"16-uart1-dma\stm32f1xx_hal_exti.o"
+"16-uart1-dma\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "16-uart1-dma\16-uart1-dma.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "16-uart1-dma.map" -o 16-uart1-dma\16-uart1-dma.axf
