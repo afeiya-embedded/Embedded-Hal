@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp
+"02-led-sys\startup_stm32f407xx.o"
+"02-led-sys\main.o"
+"02-led-sys\gpio.o"
+"02-led-sys\stm32f4xx_it.o"
+"02-led-sys\stm32f4xx_hal_msp.o"
+"02-led-sys\stm32f4xx_hal_rcc.o"
+"02-led-sys\stm32f4xx_hal_rcc_ex.o"
+"02-led-sys\stm32f4xx_hal_flash.o"
+"02-led-sys\stm32f4xx_hal_flash_ex.o"
+"02-led-sys\stm32f4xx_hal_flash_ramfunc.o"
+"02-led-sys\stm32f4xx_hal_gpio.o"
+"02-led-sys\stm32f4xx_hal_dma_ex.o"
+"02-led-sys\stm32f4xx_hal_dma.o"
+"02-led-sys\stm32f4xx_hal_pwr.o"
+"02-led-sys\stm32f4xx_hal_pwr_ex.o"
+"02-led-sys\stm32f4xx_hal_cortex.o"
+"02-led-sys\stm32f4xx_hal.o"
+"02-led-sys\stm32f4xx_hal_exti.o"
+"02-led-sys\system_stm32f4xx.o"
+--strict --scatter "02-led-sys\02-led-sys.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "02-led-sys.map" -o 02-led-sys\02-led-sys.axf
