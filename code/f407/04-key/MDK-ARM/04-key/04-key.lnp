@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp
+"04-key\startup_stm32f407xx.o"
+"04-key\main.o"
+"04-key\gpio.o"
+"04-key\stm32f4xx_it.o"
+"04-key\stm32f4xx_hal_msp.o"
+"04-key\stm32f4xx_hal_rcc.o"
+"04-key\stm32f4xx_hal_rcc_ex.o"
+"04-key\stm32f4xx_hal_flash.o"
+"04-key\stm32f4xx_hal_flash_ex.o"
+"04-key\stm32f4xx_hal_flash_ramfunc.o"
+"04-key\stm32f4xx_hal_gpio.o"
+"04-key\stm32f4xx_hal_dma_ex.o"
+"04-key\stm32f4xx_hal_dma.o"
+"04-key\stm32f4xx_hal_pwr.o"
+"04-key\stm32f4xx_hal_pwr_ex.o"
+"04-key\stm32f4xx_hal_cortex.o"
+"04-key\stm32f4xx_hal.o"
+"04-key\stm32f4xx_hal_exti.o"
+"04-key\system_stm32f4xx.o"
+--strict --scatter "04-key\04-key.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "04-key.map" -o 04-key\04-key.axf
