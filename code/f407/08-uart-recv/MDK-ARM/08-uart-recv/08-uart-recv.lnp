@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"08-uart-recv\startup_stm32f407xx.o"
+"08-uart-recv\main.o"
+"08-uart-recv\gpio.o"
+"08-uart-recv\usart.o"
+"08-uart-recv\stm32f4xx_it.o"
+"08-uart-recv\stm32f4xx_hal_msp.o"
+"08-uart-recv\stm32f4xx_hal_uart.o"
+"08-uart-recv\stm32f4xx_hal_rcc.o"
+"08-uart-recv\stm32f4xx_hal_rcc_ex.o"
+"08-uart-recv\stm32f4xx_hal_flash.o"
+"08-uart-recv\stm32f4xx_hal_flash_ex.o"
+"08-uart-recv\stm32f4xx_hal_flash_ramfunc.o"
+"08-uart-recv\stm32f4xx_hal_gpio.o"
+"08-uart-recv\stm32f4xx_hal_dma_ex.o"
+"08-uart-recv\stm32f4xx_hal_dma.o"
+"08-uart-recv\stm32f4xx_hal_pwr.o"
+"08-uart-recv\stm32f4xx_hal_pwr_ex.o"
+"08-uart-recv\stm32f4xx_hal_cortex.o"
+"08-uart-recv\stm32f4xx_hal.o"
+"08-uart-recv\stm32f4xx_hal_exti.o"
+"08-uart-recv\system_stm32f4xx.o"
+--strict --scatter "08-uart-recv\08-uart-recv.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "08-uart-recv.map" -o 08-uart-recv\08-uart-recv.axf
