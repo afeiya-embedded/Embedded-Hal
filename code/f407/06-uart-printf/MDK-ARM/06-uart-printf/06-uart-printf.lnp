@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"06-uart-printf\startup_stm32f407xx.o"
+"06-uart-printf\main.o"
+"06-uart-printf\gpio.o"
+"06-uart-printf\usart.o"
+"06-uart-printf\stm32f4xx_it.o"
+"06-uart-printf\stm32f4xx_hal_msp.o"
+"06-uart-printf\stm32f4xx_hal_uart.o"
+"06-uart-printf\stm32f4xx_hal_rcc.o"
+"06-uart-printf\stm32f4xx_hal_rcc_ex.o"
+"06-uart-printf\stm32f4xx_hal_flash.o"
+"06-uart-printf\stm32f4xx_hal_flash_ex.o"
+"06-uart-printf\stm32f4xx_hal_flash_ramfunc.o"
+"06-uart-printf\stm32f4xx_hal_gpio.o"
+"06-uart-printf\stm32f4xx_hal_dma_ex.o"
+"06-uart-printf\stm32f4xx_hal_dma.o"
+"06-uart-printf\stm32f4xx_hal_pwr.o"
+"06-uart-printf\stm32f4xx_hal_pwr_ex.o"
+"06-uart-printf\stm32f4xx_hal_cortex.o"
+"06-uart-printf\stm32f4xx_hal.o"
+"06-uart-printf\stm32f4xx_hal_exti.o"
+"06-uart-printf\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "06-uart-printf\06-uart-printf.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "06-uart-printf.map" -o 06-uart-printf\06-uart-printf.axf
