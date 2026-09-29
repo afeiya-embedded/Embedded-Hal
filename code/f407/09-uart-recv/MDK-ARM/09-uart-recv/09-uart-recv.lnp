@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"09-uart-recv\startup_stm32f407xx.o"
+"09-uart-recv\main.o"
+"09-uart-recv\gpio.o"
+"09-uart-recv\usart.o"
+"09-uart-recv\stm32f4xx_it.o"
+"09-uart-recv\stm32f4xx_hal_msp.o"
+"09-uart-recv\stm32f4xx_hal_uart.o"
+"09-uart-recv\stm32f4xx_hal_rcc.o"
+"09-uart-recv\stm32f4xx_hal_rcc_ex.o"
+"09-uart-recv\stm32f4xx_hal_flash.o"
+"09-uart-recv\stm32f4xx_hal_flash_ex.o"
+"09-uart-recv\stm32f4xx_hal_flash_ramfunc.o"
+"09-uart-recv\stm32f4xx_hal_gpio.o"
+"09-uart-recv\stm32f4xx_hal_dma_ex.o"
+"09-uart-recv\stm32f4xx_hal_dma.o"
+"09-uart-recv\stm32f4xx_hal_pwr.o"
+"09-uart-recv\stm32f4xx_hal_pwr_ex.o"
+"09-uart-recv\stm32f4xx_hal_cortex.o"
+"09-uart-recv\stm32f4xx_hal.o"
+"09-uart-recv\stm32f4xx_hal_exti.o"
+"09-uart-recv\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "09-uart-recv\09-uart-recv.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "09-uart-recv.map" -o 09-uart-recv\09-uart-recv.axf
