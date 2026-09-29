@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+"07-uart-key\startup_stm32f407xx.o"
+"07-uart-key\main.o"
+"07-uart-key\gpio.o"
+"07-uart-key\usart.o"
+"07-uart-key\stm32f4xx_it.o"
+"07-uart-key\stm32f4xx_hal_msp.o"
+"07-uart-key\stm32f4xx_hal_uart.o"
+"07-uart-key\stm32f4xx_hal_rcc.o"
+"07-uart-key\stm32f4xx_hal_rcc_ex.o"
+"07-uart-key\stm32f4xx_hal_flash.o"
+"07-uart-key\stm32f4xx_hal_flash_ex.o"
+"07-uart-key\stm32f4xx_hal_flash_ramfunc.o"
+"07-uart-key\stm32f4xx_hal_gpio.o"
+"07-uart-key\stm32f4xx_hal_dma_ex.o"
+"07-uart-key\stm32f4xx_hal_dma.o"
+"07-uart-key\stm32f4xx_hal_pwr.o"
+"07-uart-key\stm32f4xx_hal_pwr_ex.o"
+"07-uart-key\stm32f4xx_hal_cortex.o"
+"07-uart-key\stm32f4xx_hal.o"
+"07-uart-key\stm32f4xx_hal_exti.o"
+"07-uart-key\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "07-uart-key\07-uart-key.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "07-uart-key.map" -o 07-uart-key\07-uart-key.axf
