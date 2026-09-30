@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp
+"11-uart-dma-idle\startup_stm32f407xx.o"
+"11-uart-dma-idle\main.o"
+"11-uart-dma-idle\gpio.o"
+"11-uart-dma-idle\dma.o"
+"11-uart-dma-idle\usart.o"
+"11-uart-dma-idle\stm32f4xx_it.o"
+"11-uart-dma-idle\stm32f4xx_hal_msp.o"
+"11-uart-dma-idle\stm32f4xx_hal_uart.o"
+"11-uart-dma-idle\stm32f4xx_hal_rcc.o"
+"11-uart-dma-idle\stm32f4xx_hal_rcc_ex.o"
+"11-uart-dma-idle\stm32f4xx_hal_flash.o"
+"11-uart-dma-idle\stm32f4xx_hal_flash_ex.o"
+"11-uart-dma-idle\stm32f4xx_hal_flash_ramfunc.o"
+"11-uart-dma-idle\stm32f4xx_hal_gpio.o"
+"11-uart-dma-idle\stm32f4xx_hal_dma_ex.o"
+"11-uart-dma-idle\stm32f4xx_hal_dma.o"
+"11-uart-dma-idle\stm32f4xx_hal_pwr.o"
+"11-uart-dma-idle\stm32f4xx_hal_pwr_ex.o"
+"11-uart-dma-idle\stm32f4xx_hal_cortex.o"
+"11-uart-dma-idle\stm32f4xx_hal.o"
+"11-uart-dma-idle\stm32f4xx_hal_exti.o"
+"11-uart-dma-idle\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "11-uart-dma-idle\11-uart-dma-idle.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "11-uart-dma-idle.map" -o 11-uart-dma-idle\11-uart-dma-idle.axf
