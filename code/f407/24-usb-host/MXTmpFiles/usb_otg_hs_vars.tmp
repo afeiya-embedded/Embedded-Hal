@@ -1,0 +1,3 @@
+HCD_HandleTypeDef hhcd_USB_OTG_HS;
+void Error_Handler(void);
+

@@ -1,0 +1,16 @@
+
+#thhcd_USB_OTG_HS.Instance = USB_OTG_HS;
+#thhcd_USB_OTG_HS.Init.Host_channels = 12;
+#thhcd_USB_OTG_HS.Init.speed = HCD_SPEED_FULL;
+#thhcd_USB_OTG_HS.Init.dma_enable = DISABLE;
+#thhcd_USB_OTG_HS.Init.phy_itface = USB_OTG_EMBEDDED_PHY;
+#thhcd_USB_OTG_HS.Init.Sof_enable = DISABLE;
+#thhcd_USB_OTG_HS.Init.low_power_enable = DISABLE;
+#thhcd_USB_OTG_HS.Init.vbus_sensing_enable = DISABLE;
+#thhcd_USB_OTG_HS.Init.use_external_vbus = DISABLE;
+#tif (HAL_HCD_Init(&hhcd_USB_OTG_HS) != HAL_OK)
+#t{
+#t#tError_Handler( );
+#t}
+#n
+#n
